@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.60246b835619276073af.css">
-<script src="/config.4ce685d1ba9079bb0ba9.js"></script>
+<script src="/config.03fe104950f1babba007.js"></script>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
@@ -42,4 +42,19 @@
 <script src="/runtime.a5dd35324ddfd942bef1.js"></script>
 <script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
 <script src="/main.54734ab978f98119b312.zh-Hans.js"></script></body>
+<script>
+function reinitIframe() { 
+var iframe = document.getElementById("urlIframe");
+ try 
+{ 
+var bHeight = iframe.contentWindow.document.body.scrollHeight; 
+/* 
+var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+var height = Math.max(bHeight, dHeight); 
+iframe.height = height; */ 
+iframe.height = bHeight; 
+} 
+catch (ex) { } 
+}
+</script>
 </html>
